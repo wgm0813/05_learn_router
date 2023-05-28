@@ -1,16 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    APP
+    <!-- 路由链接 -->
+    <router-link to="/home">展示home</router-link>
+    <!-- 不需要有router-view才会知道根据路径显示路由的对应页面 -->
+    <!-- 占位 -->
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
