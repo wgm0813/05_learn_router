@@ -19,4 +19,14 @@ const router = createRouter({
   ]
 });
 
+// 模拟管理员登录
+let isAdmin = true
+if(isAdmin){
+  router.addRoute({
+    path: '/admin',
+    component: () => import('@/views/Admin.vue')
+  })
+  // 获取所有路由
+  console.log(router.getRoutes())
+}
 export default router
