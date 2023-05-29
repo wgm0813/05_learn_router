@@ -10,7 +10,12 @@ const router = createRouter({
   routes: [
     { path: "/", redirect: "/home" },
     { path: "/home", component: Home },
-    { path: "/user/:id", component: User }
+    { path: "/user/:id", component: User },
+    {
+      // 匹配以上都找不到的任意一个都会显示notfound页面
+      path: '/:pathMatch(.*)',
+      component:() => import('@/views/NotFound.vue')
+    }
   ]
 });
 
