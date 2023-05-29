@@ -3,6 +3,7 @@
     <h2>user页面</h2>
     <!-- 在模板中获取到id -->
     <div>User:{{ $route.params.id }}</div>
+    <div>User中query:{{ $route.query }}</div>
   </div>
 </template>
 
